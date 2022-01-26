@@ -7,24 +7,55 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
         <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
-            .arjs-loader {
-              height: 100%;
-              width: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              background-color: rgba(0, 0, 0, 0.8);
-              z-index: 9999;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+            .ui {
+                position: absolute;
+                z-index: 100;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 10px 15px 30px;
+                text-align: center;
+                box-sizing: border-box;
             }
-            .arjs-loader div {
-              text-align: center;
-              font-size: 1.25em;
-              color: white;
+            .ui a {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background-color: #ffffff;
+                line-height: 100%;
+                color: #303030;
+                margin: 10px 3px;
+                border-radius: 50%;
+                position: relative;
+    
             }
-          </style>
+            .ui a i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .ui a:active {
+                color: #ff0000;
+            }
+    
+            #snap {
+                max-width: 100%;
+                height: auto;
+                display: block;;
+                visibility: hidden;
+            }
+            .ui a.disabled {
+                pointer-events: none;
+                color: #cccccc;
+            }
+            #snap.visible {
+                visibility: visible;
+            }
+        </style>
+    
           
     </head>
 
@@ -58,70 +89,71 @@
 
             <a-entity camera></a-entity>
         </a-scene>
-        <canvas id="canvas" hidden></canvas>
-  
+        <div class="ui">
+            <img id="snap">
+            <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+            <a href="" id="take-photo" title="Take Photo"><i class="material-icons">photo_camera</i></a>
+            <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled" target="_blank"><i class="material-icons">file_download</i></a>
+        </div>
+        </body>
         <script>
-              var sceneEl = document.querySelector('a-scene');
-              var counter = 0;
-      
-              let shareData;
-              document.addEventListener('pointerup', (event) => {
-                  if (counter%2 !== 0) {
-                      navigator.share(shareData).then(function()    {}).catch(function(err) {alert(err);});
-                      ++counter;
-                      return;
-                  }
-                  function captureVideos() {
-                    var canvas = document.getElementById("canvas"); // declare a canvas element in your html
-                    var ctx = canvas.getContext("2d");
-                    var videos = document.querySelectorAll("video");
-                    var i, w, h;
-      
-                    for (i = 0, len = videos.length; i < len; i++) {
-                      const v = videos[i];
-                      
-                      try {
-                          w = v.videoWidth;
-                          h = v.videoHeight;
-                          canvas.width = w;
-                          canvas.height = h;
-                          ctx.fillRect(0, 0, w, h);
-                          ctx.drawImage(v, 0, 0, w, h);
-                          const a = canvas.toDataURL();
-                          v.style.backgroundImage = "url(" + a + ")";
-                          ctx.clearRect(0, 0, w, h); // clean the canvas
-                          canvas.width = canvas.height = 0;
-                      } catch(e) {
-                          console.log(e);
-                      }
+            var image = document.querySelector('#snap');
+            var take_photo_btn = document.querySelector('#take-photo');
+            var delete_photo_btn = document.querySelector('#delete-photo');
+            var download_photo_btn = document.querySelector('#download-photo');
+        
+            take_photo_btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                var video = document.querySelector('video');
+                var snap = takeSnapshot(video);
+        
+                image.setAttribute('src', snap);
+                image.classList.add('visible');
+        
+                delete_photo_btn.classList.remove("disabled");
+                download_photo_btn.classList.remove("disabled");
+        
+                download_photo_btn.href = snap;
+            });
+        
+            delete_photo_btn.addEventListener("click", function(e){
+        
+                e.preventDefault();
+        
+                image.setAttribute('src', "");
+                image.classList.remove("visible");
+        
+                delete_photo_btn.classList.add("disabled");
+                download_photo_btn.classList.add("disabled");
+        
+            });
+        
+            function takeSnapshot(video) {
+                var resizedCanvas = document.createElement("canvas");
+                var resizedContext = resizedCanvas.getContext("2d");
+                var width = video.videoWidth;
+                var height = video.videoHeight;
+                var aScene = document.querySelector("a-scene").components.screenshot.getCanvas("perspective");
+        
+                if (width && height) {
+                    resizedCanvas.width = width;
+                    resizedCanvas.height = height;
+                    resizedContext.drawImage(video, 0, 0, width, height);
+        
+                    if (width > height) {
+                        // 横長（PC)
+                        resizedContext.drawImage(aScene, 0, 0, width, height);
+                    } else {
+                        var scale = height / width;
+                        var scaledWidth = height * scale;
+                        var marginLeft = (width - scaledWidth) / 2;
+                        resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height);
                     }
-                  }
-                  
-                  captureVideos();
-                  sceneEl.renderer.render(sceneEl.object3D, sceneEl.camera);
-                  html2canvas(document.body, {width: document.documentElement.offsetWidth, height: document.documentElement.offsetHeight}).then(function(canvas) {
-                      function dataURLtoFile(dataurl) {
-                          var bstr = atob(dataurl.split(',')[1]), n = bstr.length, u8arr = new Uint8Array(n);
-                          while(n--){
-                              u8arr[n] = bstr.charCodeAt(n);
-                          }
-                          return u8arr;
-                      }
-                              
-                      const dataURL = canvas.toDataURL();
-                      const byteArray = dataURLtoFile(dataURL);
-                      shareData = {
-                          files: [new File([byteArray], "bla.png", {type: "image/png"})]
-                      };
-                      alert("done");
-                  }).catch(e => {
-                      alert(e);
-                      console.error(e);
-                      
-                  });
-                  ++counter;
-              });
-          </script>
-      
+                    return resizedCanvas.toDataURL('image/png');
+                }
+            }
+        
+            //-->
+        </script>
     </body>
 </html>
