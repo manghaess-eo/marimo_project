@@ -96,13 +96,13 @@
                       try {
                           w = v.videoWidth;
                           h = v.videoHeight;
-                          canvas.width = w;
-                          canvas.height = h;
-                          ctx.fillRect(0, 0, w, h);
-                          ctx.drawImage(v, 0, 0, w, h);
+                          canvas.width = 1280;
+                          canvas.height = 960;
+                          ctx.fillRect(0, 0, 1280, 960);
+                          ctx.drawImage(v, 0, 0, 1280, h);
                           const a = canvas.toDataURL();
                           v.style.backgroundImage = "url(" + a + ")";
-                          ctx.clearRect(0, 0, w, h); // clean the canvas
+                          ctx.clearRect(0, 0,  1280, 960); // clean the canvas
                           canvas.width = canvas.height = 0;
                       } catch(e) {
                           console.log(e);
