@@ -1,10 +1,16 @@
 /**** Designed by Million_Air in Twitch ****/
 /******* Discord me Million_Air#9087 *******/
-
+/*폰트변경*/
+@font-face {
+	font-family: 'CookieRun-Regular';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
 /* 기본 설정 */
 :root {
 	--maincolor: #9cd3e6 ;	/* 메인색 */
-	--bgcolor:#9cd3e6 ;	/* 배경색 */
+	--bgcolor:#00BFFF ;	/* 배경색 */
 }/*변경시 컬러코드만 변경해주세요/*
 
 html.darkmode:root {
@@ -52,6 +58,7 @@ html { background: transparent; }
 body {
 	background: transparent !important;
 	padding-top: 60px !important;
+	font-family:'CookieRun-Regular';
 }
 
 /* 헤더 */
@@ -397,18 +404,15 @@ footer {
 	padding: 16px 0 !important;
 }
 
-/* 상단으로 이동 */
-/* 사용시 주석 해제 후 url 안에 이미지 주소 입력 */
-/*#movetotop img{display:none}
+#movetotop img{display:none}
 #movetotop {
 	display: inline-block;
 	opacity: 1;
-	background: url();
-	width: 120px;
-	height: 120px;
+	background: url(https://github.com/manghaess-eo/marimo_project/blob/main/e3ef45c1-00e3-4920-bb27-57594a942e6a-profile_image-300x300.png?raw=true);
+	width: 75px;
+	height: 75px;
 	background-size: contain;
 	background-repeat: no-repeat;
-}*/
 
 
 /******* 애니메이션 *******/
