@@ -1,15 +1,15 @@
 /*폰트 변경*/
 @font-face {
-	font-family: 'CookieRun-Regular';
-   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');format('woff');
-   font-weight: normal;
-   font-style: normal;
+    font-family: 'WandohopeR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 body {
 
 letter-spacing: -0.05em !important;
  background: transparent;
- font-family:'CookieRun-Regular';
+ font-family:'WandohopeR';
 }
 
 /* 사용자 설정 부분 */
@@ -430,7 +430,7 @@ html.darkmode #article-comment a { color: white; }
 
 html.darkmode textarea.fr-code { color: white; }
 
-/* 댓글 */
+/* 댓글창 */
 #article-reply-area {
    padding: 0;
    background: var(--bgFrame);
@@ -452,7 +452,7 @@ html.darkmode textarea.fr-code { color: white; }
 #article-reply-area #reply-real-area .reply > .reply-header,
 #article-reply-area #reply-best-area .reply > .reply-header {
    padding: 0.3em 0.5em;
-   background: #fcfcfc;
+   background: #9cd3e6;
 }
 
 #article-reply-area #reply-real-area .reply > .reply-header > .reply-writer.logged,
@@ -606,6 +606,7 @@ input.form-control:focus {
    background: var(--btColor) !important;
    border-color: var(--btColor) !important;
    color: white !important;
+   
 }
 
 .btn[data-type="up"] { --btColor: #5cb85c; }
