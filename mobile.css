@@ -2,8 +2,8 @@
 /******* Discord me Million_Air#9087 *******/
 /*폰트변경*/
 @font-face {
-	font-family: 'CookieRun-Regular';
-   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');format('woff');
+   font-family: 'WandohopeR';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
    font-weight: normal;
    font-style: normal;
 }
@@ -57,7 +57,7 @@ html { background: transparent; }
 body {
 	background: transparent !important;
 	padding-top: 60px !important;
-	font-family:'CookieRun-Regular';
+	font-family:'WandohopeR';
 }
 
 /* 헤더 */
