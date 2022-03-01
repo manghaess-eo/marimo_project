@@ -6,12 +6,21 @@
    font-style: normal;
 }
 body {
-
 letter-spacing: -0.05em !important;
  background: transparent;
  font-family:'WandohopeR';
+ animation: snow 20s linear infinite;
+
+ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/sonw.png?raw=true');
 }
 
+@keyframes snow {
+
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+}
 /* 사용자 설정 부분 */
 :root {
 	  --bgColor: #9cd3e6 ;   /* 배경 색 */
@@ -39,13 +48,11 @@ html.darkmode:root {
 
 /* 모든 항목 focus시 아웃라인 제거 */
 *:focus { outline: none !important; }
-
 html {
    background: var(--bgColor);
  height: auto;
+
 }
-
-
 html.darkmode a ,a {
    color: var(--mainColor);
    transition: all 0.2s ease 0s;
@@ -54,14 +61,11 @@ a:hover,
 a:focus {
    color: var(--mainColor) !important;
 }
-
-
 /*************** header ***************/
 
 header {
    padding: 0.5em 0 0.5em 0;
 }
-
 /* 트게더 로고 ( 없으면 주석처리 하세요 ) */
 header .row>div:nth-child(1)>a {
    display: block;
@@ -371,6 +375,8 @@ html.darkmode #article-comment a { color: white; }
    border: 2px solid var(--mainColor);
    border-bottom: 1px;
    margin-top: 0.5em;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
 }
 
 #article-info>h2 {
@@ -383,6 +389,7 @@ html.darkmode #article-comment a { color: white; }
    margin-left: 8px;
    border-radius: 15px;
    
+   
 }
 
 #article-content-wrapper>.header>#article-views {
@@ -393,6 +400,8 @@ html.darkmode #article-comment a { color: white; }
    padding: 0;
    background: var(--bgFrame);
    border: 2px solid var(--mainColor) !important;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 }
 
 #article-content-wrapper>.header {
