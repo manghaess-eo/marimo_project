@@ -217,8 +217,11 @@ header #header-bar>.row {
 
 #board-info > #board-info-bottom {
    margin-top: 10px;
-   position: absolute;   left: 130px; top: 40px;
+   position: absolute;   left: 130px; top: 60px;
    
+}
+#board-info #board-info-bottom > #addFavoriteBtn {
+   padding-top: 1px;
 }
 
 #board-info>img,
@@ -248,9 +251,7 @@ header #header-bar>.row {
    content: var(--after);
    cursor: text;
 }
-#board-info #board-info-bottom > #addFavoriteBtn{
-	padding-top: 20px;
-}
+
 
 /*************** article ***************/
 
