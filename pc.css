@@ -248,7 +248,9 @@ header #header-bar>.row {
    content: var(--after);
    cursor: text;
 }
-
+#board-info #board-info-bottom > a#addFavoriteBtn{
+	padding-top: 20px;
+}
 
 /*************** article ***************/
 
