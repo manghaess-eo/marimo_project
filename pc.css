@@ -465,6 +465,7 @@ html.darkmode textarea.fr-code { color: white; }
    border: 2px solid var(--mainColor) !important;
  margin-top: 3px;
    margin-bottom: 5px;
+   border-radius: 20px;
 }
 
 #article-reply-area #reply-real-area .reply, #article-reply-area #reply-best-area .reply {
