@@ -286,7 +286,6 @@ header #header-bar>.row {
 
 #article-list #article-list-category>a {
    background: transparent;
- color: var(--mainColor) !important;
    position: relative;
 }
 
