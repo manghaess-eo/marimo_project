@@ -38,9 +38,9 @@ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/s
 
 /* 사용자 설정 부분 */
 :root {
-	  --bgColor: #9cd3e6 ;   /* 배경 색 */
-	--bgFrame: #ffffff;   /* 프레임 배경색 */
-	--mainColor: #2f564b ;   /* 메인 컬러 */
+      --bgColor: #9cd3e6 ;   /* 배경 색 */
+    --bgFrame: #ffffff;   /* 프레임 배경색 */
+    --mainColor: #2f564b ;   /* 메인 컬러 */
    --mainColor5: #BEA3C9; /* 공지, 인기글 hover */
    --mainColor3: #B3A7DC; /* 공지, 인기글 */
    --mainColor2: #BEA3C9; /* 트게더 메뉴, 게시글 hover */
@@ -48,12 +48,13 @@ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/s
    --logoWidth: 200px;	 /* 로고 너비 */
    --before: ""; /* 접속자 수 앞 문구 */
    --after: "마몽이 구경중";  /* 접속자 수 뒤 문구 */
+   scroll-behavior: smooth;
 }
 /* 다크모드용 색 설정 */
 html.darkmode:root {
-	  --bgColor: #f0f0f0;   /* 배경 색 */
-	--bgFrame: #242424;   /* 프레임 배경색 */
-	--mainColor: #777777;   /* 메인 컬러 */
+      --bgColor: #f0f0f0;   /* 배경 색 */
+    --bgFrame: #242424;   /* 프레임 배경색 */
+    --mainColor: #777777;   /* 메인 컬러 */
    --mainColor5: #77777755; /* 공지, 인기글 hover */
    --mainColor3: #77777733; /* 공지, 인기글 */
    --mainColor2: #77777722; /* 트게더 메뉴, 게시글 hover */
@@ -176,7 +177,7 @@ header #header-bar>.row {
 #main #main-content>div.frame {
    background: transparent !important;
    border: none !important;
-	border-radius: 10px;
+    border-radius: 10px;
 }
 
 
@@ -232,10 +233,12 @@ header #header-bar>.row {
 
 #board-info>img#board-info-profile-img {
    width: 80px;
-   margin-right: 15px;
+   margin-right: 20px;
    border: 2px solid var(--mainColor) !important;
    border-radius: 50%;
    transition: 0.2s;
+   /*content: url("https://github.com/manghaess-eo/marimo_project/blob/main/mini.png?raw=true");*/
+
 }
 
 #board-info>img#board-info-profile-img:hover {
@@ -601,23 +604,6 @@ html.darkmode textarea.fr-code { color: white; }
    margin: 3px 0;
 }
 
-/* 글쓰기 내부 배경 추가 */
-/*
-h3 { display: none; }
-form#articleWriteForm {
-	 margin: -1em -1em 0;
-   background: var(--bgFrame);
-   padding: 3px 10px 10px;
-   border: 2px solid var(--mainColor);
-   border-bottom: none;
-}
-form#image-upload-form {
-   margin: 0 -1em -1em;
-   background: var(--bgFrame);
-   padding: 10px;
-   border: 2px solid var(--mainColor);
-   border-top: none;
-}*/
 
 /* 버튼, 하단 검색 */
 .btn.square {
@@ -656,10 +642,11 @@ input.form-control:focus {
    color: white !important;
 }
 
-.btn[data-type="up"] { --btColor: #5cb85c; }
-.btn[data-type="down"] { --btColor: #0275d8; }
+.btn[data-type="up"] { --btColor: #5cb85c; 
+    border-radius: 20px;
+}
 .btn-default.best { --btColor: #efc839; }
-.btn-outline-danger { --btColor: #d9534f; }
+.btn-outline-danger { --btColor: #d9534f; border-radius:20px ;}/*3.26*/
 .btn-danger { --btColor: #ff6e6e; }
 .btn-info { --btColor: #5bc0de; }
 
@@ -667,6 +654,7 @@ input.form-control:focus {
 .btn-default,
 input.form-control {
    --btColor: var(--mainColor);
+   border-radius:20px ; /*3.26*/
 }
 select.form-control,
 input#title,
@@ -682,7 +670,7 @@ input.form-control {
    -webkit-transition: 0.2s !important;
 }
 input.form-control:hover,
-input.form-control:focus {}Q
+input.form-control:focus
 
 input.form-control::placeholder { color: var(--btColor) !important; }
 input.form-control:hover::placeholder,
@@ -695,6 +683,22 @@ html.darkmode footer a { color: var(--mainColor); }
 #movetotop img{display:none}
 #movetotop{display: inline-block;opacity:1;background:url(https://github.com/manghaess-eo/marimo_project/blob/main/e3ef45c1-00e3-4920-bb27-57594a942e6a-profile_image-300x300.png?raw=true);
 width: 100px; height: 100px;background-size: contain;}
+
+/*3.26*/
+#article-list #article-list-menu>.btn.best {
+    position: absolute;
+    left: 0;
+    color: #efc839;
+    background-image: none;
+    background-color: transparent;
+    border-color: #efc839;
+    border-radius: 20px;
+}
+#article-list #article-list-menu>.btn.write {
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+}
 
 /* 마우스 커서 기본 */
 html, body, .fr-popup, .fr-active div>*,
