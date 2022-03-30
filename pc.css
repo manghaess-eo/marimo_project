@@ -253,7 +253,7 @@ header #header-bar>.row {
    border: 2px solid var(--mainColor) !important;
    border-radius: 50%;
    transition: 0.2s;
-   content: url("https://github.com/manghaess-eo/marimo_project/blob/main/mini.png?raw=true");
+   /*content: url("https://github.com/manghaess-eo/marimo_project/blob/main/mini.png?raw=true");*/
 
 }
 
