@@ -32,24 +32,30 @@ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/s
 
 }
 
-#article-list:before {
-   display: block;
-    content: '';
-    position: absolute;
-    right: 16%;
-    bottom: 4.3%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 500px;
-    height: 1134px;
-    transition-duration: 1s;
-    background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true);
-    opacity: 0.3;
+
+/* 게시판 영역 배경화면 */
+#main #main-content>div.frame {
+  background: #fff url("https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true") no-repeat;
+  /*background-size: 440px 700px;*/
+  background-position: bottom right;
 }
+/*뒷배경 움직이는 애니메이션*/
+
+@keyframes snow {
+
+100% {background-position: 20% 100%;}
+
+0%{background-position: 0%,0%;}
+
+}
+
+
+
+
 /* 사용자 설정 부분 */
 :root {
       --bgColor: #9cd3e6 ;   /* 배경 색 */
-    --bgFrame: ##00ff0000;   /* 프레임 배경색 */
+    --bgFrame: #ffffff;   /* 프레임 배경색 */
     --mainColor: #2f564b ;   /* 메인 컬러 */
    --mainColor5: #BEA3C9; /* 공지, 인기글 hover */
    --mainColor3: #B3A7DC; /* 공지, 인기글 */
@@ -247,7 +253,7 @@ header #header-bar>.row {
    border: 2px solid var(--mainColor) !important;
    border-radius: 50%;
    transition: 0.2s;
-   /*content: url("https://github.com/manghaess-eo/marimo_project/blob/main/mini.png?raw=true");*/
+   content: url("https://github.com/manghaess-eo/marimo_project/blob/main/mini.png?raw=true");
 
 }
 
@@ -271,7 +277,8 @@ header #header-bar>.row {
 .frame>.frame, #article-list {
    background: var(--bgFrame);
    border: 2px solid var(--mainColor) !important;
-   border-radius: 10px/*상하단 라운드처리*/
+   border-radius: 10px
+
 }
 
 /* 공지 숨기기 버튼 */
