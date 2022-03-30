@@ -36,17 +36,18 @@ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/s
     display: block;
     content: '';
     position: absolute;
-    right: 16%;
-    bottom: 4.3%;
+    right: -12%;
+    bottom: -10.7%;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 500px;
-    height: 1134px;
+    width: 446px;
+    height: 1134px
+
+;
     transition-duration: 1s;
     background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true);
     opacity: 0.3;
 }
-
 
 /* 사용자 설정 부분 */
 :root {
