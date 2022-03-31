@@ -52,6 +52,7 @@ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/s
 
 
 
+
 /* 사용자 설정 부분 */
 :root {
       --bgColor: #9cd3e6 ;   /* 배경 색 */
@@ -189,11 +190,17 @@ header #header-bar>.row {
    color: var(--mainColor) !important;
 }
 
+#main .main-content>div.frame {
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 게시판 영역 배경화면 */
+
 /* 게시글 프레임 */
 #main #main-content>div.frame {
-   background: transparent !important;
-   border: none !important;
+  
     border-radius: 10px;
+   
 }
 
 
@@ -275,7 +282,12 @@ header #header-bar>.row {
 /*************** article ***************/
 
 .frame>.frame, #article-list {
-   background: var(--bgFrame);
+    background:#fff url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) no-repeat;
+
+  background-position: center center;
+  background-size:491px ;
+
+  
    border: 2px solid var(--mainColor) !important;
    border-radius: 10px
 
@@ -716,6 +728,7 @@ width: 100px; height: 100px;background-size: contain;}
     right: 0;
     border-radius: 20px;
 }
+
 
 /* 마우스 커서 기본 */
 html, body, .fr-popup, .fr-active div>*,
