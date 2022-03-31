@@ -194,13 +194,11 @@ header #header-bar>.row {
   box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 게시판 영역 배경화면 */
-
 /* 게시글 프레임 */
 #main #main-content>div.frame {
-  
+   background: transparent !important;
+   border: none !important;
     border-radius: 10px;
-   
 }
 
 
