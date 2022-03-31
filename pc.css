@@ -82,8 +82,13 @@ html.darkmode:root {
 /* 모든 항목 focus시 아웃라인 제거 */
 *:focus { outline: none !important; }
 html {
-   background: var(--bgColor);
- height: auto;
+   background: url("https://github.com/manghaess-eo/marimo_project/blob/main/E-nc6XNVgAQ4Alf.jpeg?raw=true") no-repeat;
+ 
+ background-position: center center;
+ background-size: cover;
+ background-attachment: fixed;
+
+ 
 
 }
 html.darkmode a ,a {
@@ -98,13 +103,15 @@ a:focus {
 
 header {
    padding: 0.5em 0 0.5em 0;
+   
 }
+
 /* 트게더 로고 ( 없으면 주석처리 하세요 ) */
 header .row>div:nth-child(1)>a {
    display: block;
    width: var(--logoWidth);
    height: 50px;
-   background: var(--logoURL) no-repeat;
+   background: var(--);
    background-size: auto 50px;
 }
 
@@ -190,16 +197,15 @@ header #header-bar>.row {
    color: var(--mainColor) !important;
 }
 
-#main .main-content>div.frame {
-  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* 게시글 프레임 */
 #main #main-content>div.frame {
    background: transparent !important;
    border: none !important;
     border-radius: 10px;
 }
+
+/* 게시판 영역 배경화면 */
+
+
 
 
 /*************** board ***************/
@@ -258,7 +264,7 @@ header #header-bar>.row {
    border: 2px solid var(--mainColor) !important;
    border-radius: 50%;
    transition: 0.2s;
-   /*content: url("https://github.com/manghaess-eo/marimo_project/blob/main/mini.png?raw=true");*/
+   content: url("https://github.com/manghaess-eo/marimo_project/blob/main/FEWcCdMaUAEKaX5.png?raw=true");
 
 }
 
@@ -283,7 +289,7 @@ header #header-bar>.row {
     background:#fff url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) no-repeat;
 
   background-position: center center;
-  background-size:472px ;
+  background-size:491px ;
 
   
    border: 2px solid var(--mainColor) !important;
