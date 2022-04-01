@@ -280,7 +280,7 @@ header #header-bar>.row {
 /*************** article ***************/
 
 .frame>.frame, #article-list {
-    background:#fff url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) no-repeat;
+    background:url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) no-repeat;
 
   background-position: center center;
   background-size:472px ;
@@ -288,6 +288,7 @@ header #header-bar>.row {
   
    border: 2px solid var(--mainColor) !important;
    border-radius: 10px
+   background-color: var(--bgFrame)
 
 }
 
