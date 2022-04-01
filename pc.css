@@ -288,7 +288,7 @@ header #header-bar>.row {
   
    border: 2px solid var(--mainColor) !important;
    border-radius: 10px
-   background-color: var(--bgFrame)
+   background-color: var(--bgFrame);
 
 }
 
