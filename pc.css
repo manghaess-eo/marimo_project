@@ -68,13 +68,18 @@ header {
    padding: 0.5em 0 0.5em 0;
 }
 /* 트게더 로고 ( 없으면 주석처리 하세요 ) */
-header .row>div:nth-child(1)>a {
-   display: block;
-   width: var(--logoWidth);
-   height: 50px;
-   background: var(--logoURL) no-repeat;
-   background-size: auto 50px;
-}
+   #board-info > h1 > a:before {
+      display: block;
+      content: "";
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      top: -118px;
+      left: -178px;
+      background: url(https://github.com/manghaess-eo/marimo_project/blob/main/logo5.png?raw=true) no-repeat;
+      background-size: auto 50px;
+      margin-bottom: -50px;
+  }
 /* 기본 트게더 로고 제거 ( 없으면 주석처리 하세요 ) */
 header .row>div:nth-child(1) > a > img {
    display: none;
@@ -209,13 +214,13 @@ header #header-bar>.row {
 }
 /*************** article ***************/
 .frame>.frame, #article-list {
-  background:var(--bgFrame);
-  background-position: center center;
-  background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) ;
-  background-repeat:no-repeat;
-  background-size:472px ;  
-  border: 2px solid var(--mainColor) !important;
-  border-radius: 10px
+   background: var(--bgFrame);
+   background-position: center center;
+   background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true);
+   background-repeat: no-repeat;
+   background-size: 472px;
+   border: 2px solid var(--mainColor) !important;
+   border-radius: 10px
 }
 /* 공지 숨기기 버튼 */
 #article-list #article-option-area {
@@ -617,3 +622,4 @@ input[type='text'] {
 small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
 @keyframes heartbeat {0% {transform: scale(1.2);}50% {transform: scale(1.5);}100% {transform: scale(1.2);}}
 #article-list>.article-list-row>.item>.list-title>small.favo  {color: #b2ffff;}
+
