@@ -68,9 +68,12 @@ header {
    padding: 0.5em 0 0.5em 0;
 }
 /* 트게더 로고 ( 없으면 주석처리 하세요 ) */
-header .row>div:nth-child(1)>a>img {
-	content: url(--logoURL);
-	height: 50px;
+header .row>div:nth-child(1)>a {
+   display: block;
+   width: var(--logoWidth);
+   height: 50px;
+   background: var(--logoURL) no-repeat;
+   background-size: auto 50px;
 }
 /* 기본 트게더 로고 제거 ( 없으면 주석처리 하세요 ) */
 header .row>div:nth-child(1) > a > img {
