@@ -18,12 +18,7 @@ background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/s
 0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 }
-/* 게시판 영역 배경화면 */
-#main #main-content>div.frame {
-  background: #fff url("https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true") no-repeat;
-  /*background-size: 440px 700px;*/
-  background-position: bottom right;
-}
+
 /*뒷배경 움직이는 애니메이션*/
 @keyframes snow {
 100% {background-position: 20% 100%;}
@@ -214,8 +209,10 @@ header #header-bar>.row {
 }
 /*************** article ***************/
 .frame>.frame, #article-list {
-  background:#fff url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) no-repeat;
+  background:var(--bgFrame);
   background-position: center center;
+  background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true) ;
+  background-repeat:no-repeat;
   background-size:472px ;  
   border: 2px solid var(--mainColor) !important;
   border-radius: 10px
@@ -620,4 +617,3 @@ input[type='text'] {
 small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
 @keyframes heartbeat {0% {transform: scale(1.2);}50% {transform: scale(1.5);}100% {transform: scale(1.2);}}
 #article-list>.article-list-row>.item>.list-title>small.favo  {color: #b2ffff;}
-
