@@ -606,13 +606,13 @@ input[type=radio],
 .reply > .reply-header > .reply-writer.logged,
 .reply-menu, .btn, .fr-command.fr-btn, .fr-view img,
 .pull-left, a {
-    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c22.png?raw=true) 0 0, auto !important;
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c33.png?raw=true) 0 0, auto !important;
 }
 /* 마우스 커서 텍스트 */
 #article-list #boardSearchForm .form-control,
 .fr-view, .fr-box.fr-basic.fr-element,
 input[type='text'] {
-    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c33.png?raw=true) 0 0, auto !important;
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c22.png?raw=true) 0 0, auto !important;
 }
 small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
 @keyframes heartbeat {0% {transform: scale(1.2);}50% {transform: scale(1.5);}100% {transform: scale(1.2);}}
