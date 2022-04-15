@@ -6,24 +6,23 @@
    font-style: normal;
 }
 body {
-letter-spacing: -0.05em !important;
- background: transparent;
+/*letter-spacing: -0.05em !important;*/
  font-family:'WandohopeR';
-animation: snow 20s linear infinite;
-/*백그라운드 이미지 원근감느낌 이미지*/
-background-image:url('https://github.com/manghaess-eo/marimo_project/blob/main/sow.png?raw=true'), url("https://github.com/manghaess-eo/marimo_project/blob/main/sow1.png?raw=true"), url("https://github.com/manghaess-eo/marimo_project/blob/main/sow2.png?raw=true");
-}
-/*뒷배경 움직이는 애니메이션*/
-@keyframes snow {
-0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+    width:auto;
+      height: auto;
+      animation:background 80s linear infinite;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png");
+    
+    color: var(--mainColor);
+
 }
 
-/*뒷배경 움직이는 애니메이션*/
-@keyframes snow {
-100% {background-position: 20% 100%;}
-0%{background-position: 0%,0%;}
+
+@keyframes background {
+0% {background-position: 0px 0px, 0px 0px;}
+100% {background-position: 2000px 2000px;}
 }
+
 /* 사용자 설정 부분 */
 :root {
       --bgColor: #9cd3e6 ;   /* 배경 색 */
@@ -52,11 +51,18 @@ html.darkmode:root {
 /* 모든 항목 focus시 아웃라인 제거 */
 *:focus { outline: none !important; }
 html {
-   background: var(--bgColor);
- height: auto;
+      background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+		position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 0;
+        object-fit: cover;
 }
 html.darkmode a ,a {
-   color: var(--mainColor);
+   color: var(--mainColor2);
    transition: all 0.2s ease 0s;
 }
 a:hover,
@@ -117,7 +123,8 @@ header #header-bar>.row {
 /* 트게더 메뉴 */
 #main .menu-wrapper {
    background: var(--bgFrame) !important;
-   border: 2px solid var(--mainColor) !important;
+   border: 2px var(--mainColor2) !important;
+   border-style:dashed;
    width:180px;
    border-radius: 4px; /*왼쪽메뉴 라운드처리*/
 }
@@ -133,7 +140,7 @@ header #header-bar>.row {
    height: 2px;
 }
 #main .menu-wrapper>.header {
-   background: var(--mainColor) !important;
+   background: var(--mainColor2) !important;
 }
 #main .menu-wrapper>a>em,
 #main .menu-wrapper>a>i.fa.fa-square {
@@ -214,7 +221,7 @@ header #header-bar>.row {
    background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true);
    background-repeat: no-repeat;
    background-size: 472px;
-   border: 2px solid var(--mainColor) !important;
+   border: border: 2px solid var(--mainColor) !important;
    border-radius: 10px
 }
 /* 공지 숨기기 버튼 */
@@ -596,9 +603,24 @@ select.form-control,
 input[type=checkbox],
 input[type=radio],
 .opt {
-    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c11.png?raw=true) 0 0, auto !important;
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c1.png?raw=true) 0 0, auto !important;
 }
 /* 마우스 커서 링크 */
+#right-search-form>#right-search-btn,
+#board-info #board-info-bottom #addFavoriteBtn,
+#article-list #article-option-area>#article-option-area-toggle-btn,
+#article-list>.article-list-row>.item>.list-title>.list-writer>span,
+.reply > .reply-header > .reply-writer.logged,
+.reply-menu, .btn, .fr-command.fr-btn, .fr-view img,
+.pull-left, a {
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c1.png?raw=true) 0 0, auto !important;
+}
+/* 마우스 커서 텍스트 */
+#article-list #boardSearchForm .form-control,
+.fr-view, .fr-box.fr-basic.fr-element,
+input[type='text'] {
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c11.png?raw=true) 0 0, auto !important;
+}
 #right-search-form>#right-search-btn,
 #board-info #board-info-bottom #addFavoriteBtn,
 #article-list #article-option-area>#article-option-area-toggle-btn,
@@ -617,4 +639,3 @@ input[type='text'] {
 small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
 @keyframes heartbeat {0% {transform: scale(1.2);}50% {transform: scale(1.5);}100% {transform: scale(1.2);}}
 #article-list>.article-list-row>.item>.list-title>small.favo  {color: #b2ffff;}
-
