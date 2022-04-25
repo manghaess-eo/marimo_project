@@ -639,3 +639,56 @@ input[type='text'] {
 small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
 @keyframes heartbeat {0% {transform: scale(1.2);}50% {transform: scale(1.5);}100% {transform: scale(1.2);}}
 #article-list>.article-list-row>.item>.list-title>small.favo  {color: #b2ffff;}
+/*커스텀 이모티콘*/
+.fr-command.fr-emoticon[data-param1="GrammarKing"] > img { 
+     width: 30px !important; 
+     height: 30px !important; 
+     padding-left: 30px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/badmood.jpg?raw=true");
+     background-size: 100%;
+} 
+
+/** 글작성 후 보이는 이미지 수정**/ 
+.fr-emoticon.fr-deletable > img[alt="GrammarKing"]{ 
+     width: 50px !important; 
+     height: 50px !important; 
+     padding-left: 50px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/badmood.jpg?raw=true");
+     background-size: 100%; 
+}
+
+.fr-command.fr-emoticon[data-param1="Mau5"] > img { 
+     width: 30px !important; 
+     height: 30px !important; 
+     padding-left: 30px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true");
+     background-size: 100%;
+} 
+
+/** 글작성 후 보이는 이미지 수정**/ 
+.fr-emoticon.fr-deletable > img[alt="Mau5"]{ 
+     width: 50px !important; 
+     height: 50px !important; 
+     padding-left: 50px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true");
+     background-size: 100%; 
+}
+
+.fr-command.fr-emoticon[data-param1="SMOrc"] > img { 
+     width: 30px !important; 
+     height: 30px !important; 
+     padding-left: 30px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true");
+     background-size: 100%;
+} 
+
+/** 글작성 후 보이는 이미지 수정**/ 
+.fr-emoticon.fr-deletable > img[alt="SMOrc"]{ 
+     width: 50px !important; 
+     height: 50px !important; 
+     padding-left: 50px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true");
+     background-repeat:no-repeat;
+     background-size: 100%; 
+}
+
