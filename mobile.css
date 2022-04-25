@@ -413,55 +413,82 @@ footer {
 	background-repeat: no-repeat;
 
 /*커스텀 이모티콘*/
-.fr-command.fr-emoticon[data-param1="GrammarKing"] > img { 
-     width: 30px !important; 
-     height: 30px !important; 
-     padding-left: 30px;
-     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/badmood.jpg?raw=true");
-     background-size: 100%;
-} 
-
-/** 글작성 후 보이는 이미지 수정**/ 
-.fr-emoticon.fr-deletable > img[alt="GrammarKing"]{ 
-     width: 50px !important; 
-     height: 50px !important; 
-     padding-left: 50px;
-     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/badmood.jpg?raw=true");
-     background-size: 100%; 
+#article-content-wrapper #article-content img[alt='Mau5'],
+img[alt='Mau5'] {
+  width: 60px;
+  height: 60px !important;
+  padding-left: 60px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true) no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+ 
+span[data-param1='Mau5']:hover>img,
+span[data-param1='Mau5']>img {
+  width: 30px;
+  height: 30px;
+  padding-left: 30px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true) no-repeat;
+  background-size: 30px;
+  background-position: center;
 }
 
-.fr-command.fr-emoticon[data-param1="Mau5"] > img { 
-     width: 30px !important; 
-     height: 30px !important; 
-     padding-left: 30px;
-     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true");
-     background-size: 100%;
-} 
-
-/** 글작성 후 보이는 이미지 수정**/ 
-.fr-emoticon.fr-deletable > img[alt="Mau5"]{ 
-     width: 50px !important; 
-     height: 50px !important; 
-     padding-left: 50px;
-     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true");
-     background-size: 100%; 
+#article-content-wrapper #article-content img[alt='Mau5'],
+img[alt='Mau5'] {
+  width: 60px;
+  height: 60px !important;
+  padding-left: 60px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true) no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+ 
+span[data-param1='Mau5']:hover>img,
+span[data-param1='Mau5']>img {
+  width: 30px;
+  height: 30px;
+  padding-left: 30px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/emptyeyes.png?raw=true) no-repeat;
+  background-size: 30px;
+  background-position: center;
 }
 
-.fr-command.fr-emoticon[data-param1="SMOrc"] > img { 
-     width: 30px !important; 
-     height: 30px !important; 
-     padding-left: 30px;
-     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true");
-     background-size: 100%;
-} 
-
-/** 글작성 후 보이는 이미지 수정**/ 
-.fr-emoticon.fr-deletable > img[alt="SMOrc"]{ 
-     width: 50px !important; 
-     height: 50px !important; 
-     padding-left: 50px;
-     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true");
-     background-repeat:no-repeat;
-     background-size: 100%; 
+#article-content-wrapper #article-content img[alt='SMOrc'],
+img[alt='SMOrc'] {
+  width: 60px;
+  height: 60px !important;
+  padding-left: 60px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true) no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+ 
+span[data-param1='SMOrc']:hover>img,
+span[data-param1='SMOrc']>img {
+  width: 30px;
+  height: 30px;
+  padding-left: 30px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true) no-repeat;
+  background-size: 30px;
+  background-position: center;
 }
 
+#article-content-wrapper #article-content img[alt='GrammarKing'],
+img[alt='GrammarKing'] {
+  width: 60px;
+  height: 60px !important;
+  padding-left: 60px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/vlcsnap-2022-04-25-12h25m35s380.png?raw=true) no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+ 
+span[data-param1='GrammarKing']:hover>img,
+span[data-param1='GrammarKing']>img {
+  width: 30px;
+  height: 30px;
+  padding-left: 30px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/badmood.jpg?raw=true) no-repeat;
+  background-size: 30px;
+  background-position: center;
+}
