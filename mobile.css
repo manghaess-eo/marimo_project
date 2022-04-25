@@ -1,18 +1,12 @@
 /**** Designed by Million_Air in Twitch ****/
 /******* Discord me Million_Air#9087 *******/
-/*폰트변경*/
-@font-face {
-   font-family: 'WandohopeR';
-   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
-}
+
 /* 기본 설정 */
 :root {
-	--maincolor: #9cd3e6 ;	/* 메인색 */
-	--bgcolor:#00BFFF ;	/* 배경색 */
-	scroll-behavior: smooth;
-}/*변경시 컬러코드만 변경해주세요/*
+	--maincolor: #9cd3e6;	/* 메인색 */
+	--bgcolor: #00BFFF;	/* 배경색 */
+}
+
 html.darkmode:root {
 	--maincolor: #b8a6d8;	/* 메인색 */
 	--bgcolor: #151515; /* 배경색 */
@@ -39,7 +33,7 @@ html.darkmode:root {
 /* 링크 기본 색상 */
 a:hover,
 a:focus,
-a {#000000;}
+a { color: var(--maincolor) !important;  }
 
 /* fontawesome 사용 */
 a.nav-link,
@@ -58,7 +52,6 @@ html { background: transparent; }
 body {
 	background: transparent !important;
 	padding-top: 60px !important;
-	font-family:'WandohopeR';
 }
 
 /* 헤더 */
@@ -81,8 +74,7 @@ header {
 /* 로고 변경시 주석 해제 후 url 안에 이미지 주소 입력 */
 header>#header-area>a>h1 {
 	background: url(https://github.com/manghaess-eo/marimo_project/blob/main/logo5.png?raw=true) no-repeat;
-	background-size: auto 32px;
-	width:128px;
+	background-size: 90px 32px;
 	margin-top: 2px;
 }
 
@@ -278,16 +270,19 @@ span.a-badge i.fa.fa-info-circle {
 	border-top: 3px solid var(--maincolor) !important;
 }
 
-/**
+/*
 #comment-write-form #comment-write-button-area {
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
 }
-label.pull-left { margin-bottom: 5px; }
-.pull-left { margin-right: calc(100% - 100px); }
+label.pull-left { margin-bottom: 5px; margin-right: calc(100% - 100px); }
+#addEmoteBtn,
 #btnRereplyCancelBtn { margin-right: 3px; }
 #writeCommentBtn { flex: 1; }
+*/
+
+
 /* 게시글 페이지 */
 .pagination>li>a,
 .pagination>li>span,
@@ -402,17 +397,44 @@ footer {
 	padding: 16px 0 !important;
 }
 
+/* 상단으로 이동 */
+/* 사용시 주석 해제 후 url 안에 이미지 주소 입력 */
 #movetotop img{display:none}
 #movetotop {
 	display: inline-block;
 	opacity: 1;
 	background: url(https://github.com/manghaess-eo/marimo_project/blob/main/e3ef45c1-00e3-4920-bb27-57594a942e6a-profile_image-300x300.png?raw=true);
-	width: 75px;
-	height: 75px;
+	width: 120px;
+	height: 120px;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
 
-/*커스텀 이모티콘*/
+
+/******* 애니메이션 *******/
+small.favo i.fa.fa-heart {
+	animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+	0% { transform: scale(1); }
+	30% { transform: scale(1.25); }
+	42% { transform: scale(0.9); }
+	60% { transform: scale(1.15); }
+	85% { transform: scale(0.95); }
+	100% { transform: scale(1); }
+}
+
+span.a-badge i.fa.fa-star {
+	animation: shiningstar 2s infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes shiningstar {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
 #article-content-wrapper #article-content img[alt='Mau5'],
 img[alt='Mau5'] {
   width: 60px;
