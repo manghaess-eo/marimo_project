@@ -514,3 +514,23 @@ span[data-param1='GrammarKing']>img {
   background-size: 30px;
   background-position: center;
 }
+
+#article-content-wrapper #article-content img[alt='DansGame'],
+img[alt='DansGame'] {
+  width: 60px;
+  height: 60px !important;
+  padding-left: 60px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/ezgif-1-b4f987e402.gif?raw=true) no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+ 
+span[data-param1='DansGame']:hover>img,
+span[data-param1='DansGame']>img {
+  width: 30px;
+  height: 30px;
+  padding-left: 30px;
+  background: url(https://github.com/manghaess-eo/marimo_project/blob/main/ezgif-1-b4f987e402.gif?raw=true) no-repeat;
+  background-size: 30px;
+  background-position: center;
+}
