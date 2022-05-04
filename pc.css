@@ -692,3 +692,22 @@ small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
      background-size: 100%; 
 }
 
+.fr-command.fr-emoticon[data-param1="DansGame"] > img { 
+     width: 30px !important; 
+     height: 30px !important; 
+     padding-left: 30px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/ezgif-1-b4f987e402.gif?raw=true");
+     background-size: 100%;
+} 
+
+/** 글작성 후 보이는 이미지 수정**/ 
+.fr-emoticon.fr-deletable > img[alt="DansGame"]{ 
+     width: 50px !important; 
+     height: 50px !important; 
+     padding-left: 50px;
+     background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/ezgif-1-b4f987e402.gif?raw=true");
+     background-repeat:no-repeat;
+     background-size: 100%; 
+}
+
+
