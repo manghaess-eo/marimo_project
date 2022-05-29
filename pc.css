@@ -8,10 +8,11 @@
 body {
 /*letter-spacing: -0.05em !important;*/
  font-family:'WandohopeR';
-    width:auto;
-      height: auto;
-      animation:background 80s linear infinite;
+    width:100%;
+      height: 1730px;
+      
       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png");
+      animation:background 70s linear infinite;
     
     color: var(--mainColor);
 
@@ -19,9 +20,10 @@ body {
 
 
 @keyframes background {
-0% {background-position: 0px 0px, 0px 0px;}
-100% {background-position: 2000px 2000px;}
+ from { background-position: center 0;
+        } to { background-position: center 1730px }
 }
+
 
 /* 사용자 설정 부분 */
 :root {
@@ -51,7 +53,7 @@ html.darkmode:root {
 /* 모든 항목 focus시 아웃라인 제거 */
 *:focus { outline: none !important; }
 html {
-      background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+      background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png)repeat;
 		position: absolute;
 	top: 0;
 	bottom: 0;
@@ -59,7 +61,8 @@ html {
 	right: 0;
 	display: block;
   	z-index: 0;
-        object-fit: cover;
+        object-fit: cover; ;
+  
 }
 html.darkmode a ,a {
    color: var(--mainColor2);
@@ -576,10 +579,7 @@ input.form-control:focus::placeholder {
 }
 /* 버튼, 하단 검색 끝 */
 html.darkmode footer a { color: var(--mainColor); }
-/* 위로가기 버튼 수정*/
-#movetotop img{display:none}
-#movetotop{display: inline-block;opacity:1;background:url(https://github.com/manghaess-eo/marimo_project/blob/main/e3ef45c1-00e3-4920-bb27-57594a942e6a-profile_image-300x300.png?raw=true);
-width: 100px; height: 100px;background-size: contain;}
+
 /*3.26*/
 #article-list #article-list-menu>.btn.best {
     position: absolute;
@@ -708,4 +708,22 @@ small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
      background-image: url("https://github.com/manghaess-eo/marimo_project/blob/main/ezgif-1-b4f987e402.gif?raw=true");
      background-repeat:no-repeat;
      background-size: 100%; 
+}
+#movetotop {
+    display: inline-block;
+    opacity: 1;
+    background: url(https://github.com/manghaess-eo/marimo_project/blob/main/e3ef45c1-00e3-4920-bb27-57594a942e6a-profile_image-300x300.png?raw=true);
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+   animation: up-down 1.4s infinite ease-in-out alternate;
+}
+
+@keyframes up-down{
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-20px);
+  }
 }
