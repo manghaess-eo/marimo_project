@@ -716,14 +716,6 @@ small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
     width: 100px;
     height: 100px;
     background-size: contain;
-   animation: up-down 1.4s infinite ease-in-out alternate;
+
 }
 
-@keyframes up-down{
-  from{
-    transform: translatey(0px);
-  }
-  to{
-    transform: translatey(-20px);
-  }
-}
