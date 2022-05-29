@@ -709,6 +709,7 @@ small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
      background-repeat:no-repeat;
      background-size: 100%; 
 }
+#movetotop img{display:none}
 #movetotop {
     display: inline-block;
     opacity: 1;
