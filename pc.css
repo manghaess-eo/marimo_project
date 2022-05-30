@@ -7,7 +7,10 @@
 
 :root{
 	--main_color : #aabbdd;
+	
+    scroll-behavior: smooth;
 }
+
 
 /*바디*/
 body {
@@ -382,8 +385,9 @@ footer a:hover {
     margin-bottom: 5px;
 }
 #board-info #viewers-area #viewers:after {
-   content: var(--after);
-   cursor: text;
+    content: "마몽눈팅중";
+    cursor: text;
+    font-weight: bold;
 }
 /*상단인원*/
 #board-info #viewers-area .fa-user:before{
