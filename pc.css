@@ -1,10 +1,9 @@
-@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/Tium.woff2');
-
-* {
-	font-family: 'Tium';
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-
-
 :root{
 	--main_color : #aabbdd;
 	
