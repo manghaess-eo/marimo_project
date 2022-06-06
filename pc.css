@@ -163,7 +163,8 @@ header #right-search-form > #right-search-btn {
 
 #board-info #board-info-profile-img:hover {
     border-radius: 15px 50% 50% 15px;
-    transition: all 0.5s
+    transform: rotate( 360deg );
+
 }
 
 #board-info .pull-right {
@@ -554,4 +555,10 @@ small.favo i.fa.fa-heart {animation: heartbeat 1.5s infinite;}
     position: absolute;
     right: 0;
     border-radius: 20px;
+}
+footer {
+    padding: 2em 0 4em;
+    text-align: center;
+    background: url(https://github.com/manghaess-eo/marimo_project/blob/main/FTLAwzJakAA1TWR.png?raw=true) left bottom repeat-x;
+   
 }
