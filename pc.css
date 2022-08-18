@@ -218,9 +218,9 @@ header #right-search-form > #right-search-btn {
 .frame>.frame, #article-list {
     background: var(--bgFrame);
     background-position: center center;
-    background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/main-cutout.png?raw=true);
+    background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/FSrqXiSVEAI5OvM-cutout.png?raw=true);
     background-repeat: no-repeat;
-    background-size: 472px;
+    background-size: 800px;
     border: border: 2px solid var(--mainColor) !important;
     border-radius: 10px
 }
@@ -526,9 +526,9 @@ small.favo i.fa.fa-heart {
 #movetotop {
     display: inline-block;
     opacity: 1;
-    background: url(https://github.com/manghaess-eo/marimo_project/blob/main/e3ef45c1-00e3-4920-bb27-57594a942e6a-profile_image-300x300.png?raw=true);
-    width: 100px;
-    height: 100px;
+    background: url(https://github.com/manghaess-eo/marimo_project/blob/main/FSMlXQoakAI2gP--cutout.png?raw=true);
+    width: 150px;
+    height: 150px;
     background-size: contain;
 }
 
