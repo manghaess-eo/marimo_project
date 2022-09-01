@@ -15,13 +15,13 @@ body {
     font-family: "Binggrae-Two";
     height: auto;
 
-    background: url("https://github.com/manghaess-eo/marimo_project/blob/main/E-nc6XNVgAQ4Alf.jpeg?raw=true") no-repeat;
+    background: url("https://github.com/manghaess-eo/marimo_project/blob/main/FaZP0bQagAAID37.jpeg?raw=true") no-repeat;
 
  background-position: center center;
  background-size: cover;
  background-attachment: fixed;
 
-
+ max-width: 100%;
  height: auto;
 }
 
@@ -179,7 +179,7 @@ header #right-search-form > #right-search-btn {
 }
 
 #board-info #board-info-bottom a {
-    color: var(--main_color)
+    display: none;
 }
 
 /*게시판*/
@@ -530,6 +530,10 @@ small.favo i.fa.fa-heart {
     width: 150px;
     height: 150px;
     background-size: contain;
+     overflow: hidden;
+      transform: scale(1.5);
+  transition: transform 1s;
+
 }
 
 #article-list #article-list-menu>.btn.best {
