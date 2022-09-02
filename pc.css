@@ -553,3 +553,7 @@ small.favo i.fa.fa-heart {
 }
 
 
+.container {
+    max-width: 100%;
+    width: 1100px;
+}
