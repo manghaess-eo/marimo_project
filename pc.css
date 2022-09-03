@@ -13,11 +13,12 @@
 /*바디*/
 body {
     font-family: "Binggrae-Two";
-    height: auto;
+    width: auto;
+  background: url("https://github.com/manghaess-eo/marimo_project/blob/main/main_bg.jpeg?raw=true") no-repeat;
 
-    background: url("https://github.com/manghaess-eo/marimo_project/blob/main/FaZP0bQagAAID37.jpeg?raw=true") no-repeat;
-
-
+ background-position: center center;
+ background-size: cover;
+ background-attachment: fixed;
 }
 
 /*로고*/
