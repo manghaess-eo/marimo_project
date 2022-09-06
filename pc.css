@@ -553,7 +553,7 @@ small.favo i.fa.fa-heart {
     width: 1100px;
 }
 
- #article-list:after { 
+  #article-list:after { 
  	display: block; 
  	content: '';
  	position: absolute; 
@@ -562,8 +562,10 @@ small.favo i.fa.fa-heart {
  	background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/FbmYSbUaQAAtzwd-cutout.png?raw=true);
  	background-size: contain;
  	background-repeat: no-repeat; 
- 	width: 200px; height: 200px; 
+ 	width: 150px; height: 200px; 
  	transition-duration: 1s; 
+ 	
+
 
  }
  	#article-list { 
@@ -572,17 +574,20 @@ small.favo i.fa.fa-heart {
  	} 
  	#article-list:hover:after { 
  		transition-duration: 1s; 
- 		
+ 		transform: rotate(720deg);	
  		background-repeat: no-repeat; 
- 		top: -150px; 
+ 		center: -90px; 
  		
  	}
 header{
 	height: 90px;
-	background: url(https://github.com/manghaess-eo/marimo_project/blob/main/FSMlXQoakAI2gP--cutout.png?raw=true) no-repeat;
+	background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/jk.png?raw=true) no-repeat;
 	background-size:contain ;
 	background-position:center;
 	margin-bottom:40px ;
-	
+
+
 }
+
+
 
