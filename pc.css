@@ -574,7 +574,7 @@ small.favo i.fa.fa-heart {
  	} 
  	#article-list:hover:after { 
  		transition-duration: 1s; 
- 		transform: rotate(720deg);	
+ 			
  		background-repeat: no-repeat; 
  		center: -90px; 
  		
