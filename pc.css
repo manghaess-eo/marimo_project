@@ -552,33 +552,29 @@ small.favo i.fa.fa-heart {
     max-width: 100%;
     width: 1100px;
 }
+#article-list:after { 
+	display: block; content: ''; 
+	position: absolute; 
+	right: 0; 
+	top: 571px; 
+	background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/FbmYSbUaQAAtzwd-cutout.png?raw=true); 
+	background-size: contain; 
+	background-repeat: no-repeat; 
+	width: 200px; 
+	height: 200px; 
+	transition-duration: 1s; 
+	
+} 
+#article-list { overflow: hidden; 
+	
+} 
+#article-list:hover:after { 
+	transition-duration: 1s; 
+	background-repeat: no-repeat; 
+	top: -190px; 
+	
+}
 
-  #article-list:after { 
- 	display: block; 
- 	content: '';
- 	position: absolute; 
- 	right: 0; 
- 	top: 571px;
- 	background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/FbmYSbUaQAAtzwd-cutout.png?raw=true);
- 	background-size: contain;
- 	background-repeat: no-repeat; 
- 	width: 150px; height: 200px; 
- 	transition-duration: 1s; 
- 	
-
-
- }
- 	#article-list { 
- 	overflow: hidden; 
- 		
- 	} 
- 	#article-list:hover:after { 
- 		transition-duration: 1s; 
- 			
- 		background-repeat: no-repeat; 
- 		center: -90px; 
- 		
- 	}
 header{
 	height: 90px;
 	background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/jk.png?raw=true) no-repeat;
