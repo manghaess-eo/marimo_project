@@ -155,6 +155,7 @@ header #right-search-form > #right-search-btn {
     border-radius: 50%;
     background: #fff;
     border: 5px solid var(--main_color);
+    content: url(https://raw.githubusercontent.com/manghaess-eo/marimo_project/main/FcKc56baQAA5Rvt.jpg);		
 }
 
 #board-info #board-info-profile-img:hover {
