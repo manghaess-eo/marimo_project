@@ -1,41 +1,146 @@
-<!doctype html>
 <html>
-    <head>
+   <head>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-    </head>
+   </head>
+   <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <style>
+      .ui{
+         position: absolute;
+            z-index: 100;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 10px 15px 30px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .ui a {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            line-height: 100%;
+            color: #303030;
+            margin: 10px 3px;
+            border-radius: 50%;
+            position: relative;
 
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
+        }
+        .ui a i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .ui a:active {
+            color: #ff0000;
+        }
+
+        #snap {
+            max-width: 100%;
+            height: auto;
+            display: block;;
+            visibility: hidden;
+        }
+        .ui a.disabled {
+            pointer-events: none;
+            color: #cccccc;
+        }
+        #snap.visible {
+            visibility: visible;
+        }
+   </style>
+   <body style="margin: 0; overflow: hidden;">
+      <a-assets>
+         <img id="pngImage" crossorigin="anonymous" src="main-cutout.png">
+         </a-assets>
+         
+         <a-scene 
+         embedded arjs=’sourceType: webcam; sourceWidth:1920; sourceHeight:1080; displayWidth: 1920; displayHeight: 1080;’
+         vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
             embedded
-            gesture-detector
-        >
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-                <a-image
-                    src="assets/asset.png"
-                    scale="1 1 1"
+            gesture-detector>
+            <a-image 
+            position = "0 1.5 -1" width="1" height="1"   scale="1 1 1"
                     class="clickable"
-                    rotation="-90 0 0"
+                
                     gesture-handler
-                ></a-image>
-            </a-marker>
+            src="#pngImage"></a-image>
+         
+         </a-scene>
+         <div class="ui">
+            <img id="snap">
+            <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+            <a href="" id="take-photo" title="Take Photo"><i class="material-icons">photo_camera</i></a>
+            <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled" target="_blank"><i class="material-icons">file_download</i></a>
+        </div>
+       
+        <script>
+         var image = document.querySelector('#snap');
+         var take_photo_btn = document.querySelector('#take-photo');
+         var delete_photo_btn = document.querySelector('#delete-photo');
+         var download_photo_btn = document.querySelector('#download-photo');
+     
+         take_photo_btn.addEventListener("click", function (e) {
+             e.preventDefault();
+             var video = document.querySelector('video');
+             var snap = takeSnapshot(video);
+     
+             image.setAttribute('src', snap);
+             image.classList.add('visible');
+     
+             delete_photo_btn.classList.remove("disabled");
+             download_photo_btn.classList.remove("disabled");
+     
+             download_photo_btn.href = snap;
+         });
+     
+         delete_photo_btn.addEventListener("click", function(e){
+     
+             e.preventDefault();
+     
+             image.setAttribute('src', "");
+             image.classList.remove("visible");
+     
+             delete_photo_btn.classList.add("disabled");
+             download_photo_btn.classList.add("disabled");
+     
+         });
+     
+         function takeSnapshot(video) {
+             var resizedCanvas = document.createElement("canvas");
+             var resizedContext = resizedCanvas.getContext("2d");
+             var width = video.videoWidth;
+             var height = video.videoHeight;
+             var aScene = document.querySelector("a-scene").components.screenshot.getCanvas("perspective");
+     
+             if (width && height) {
+                 resizedCanvas.width = 1920;
+                 resizedCanvas.height = 1080;
+                 resizedContext.drawImage(video, 0, 0, 1920, 1080);
+     
+                 if (width > height) {
+                     resizedContext.drawImage(aScene, 0, 0, 1920, 1080);
+                 } else {
+                     var scale = height / 1080;
+                     var scaledWidth = 1920 * scale;
+                     var marginLeft = (1080 - scaledWidth) / 2;
+                     resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, 1920);
+                 }
+                 return resizedCanvas.toDataURL('image/png');
+             }
+         }
+     
+         //-->
+     </script>
 
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+  </body>
 </html>
