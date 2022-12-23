@@ -221,12 +221,12 @@ header #right-search-form > #right-search-btn {
 
 .frame>.frame, #article-list {
     background: var(--bgFrame);
-    background-position: center center;
-    background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/sin.png?raw=true);
+    background-position: bottom;
+    background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/move.png?raw=true);
     background-repeat: no-repeat;
-    background-size: 800px;
+    background-size: 1200px;
     border: border: 2px solid var(--mainColor) !important;
-    border-radius: 10px;	
+    border-radius: 10px;
 }
 
 #article-list>.article-list-row {
