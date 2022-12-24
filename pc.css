@@ -547,6 +547,10 @@ header{
 
 
 }
+#article-list>.article-list-row>.item>.list-title>a
+{
+	color:#fa7089;
+}
 .snowflake {
 				 --size: 1vw;
 				 width: var(--size);
