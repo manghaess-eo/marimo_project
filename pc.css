@@ -5,7 +5,12 @@
  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 :root {
@@ -519,28 +524,7 @@ small.favo i.fa.fa-heart {
     max-width: 100%;
     width: 1100px;
 }
-#article-list:after { 
-	display: block; content: ''; 
-	position: absolute; 
-	right: 0; 
-	top: 571px; 
-	background-image: url(https://github.com/manghaess-eo/marimo_project/blob/main/FbmYSbUaQAAtzwd-cutout.png?raw=true); 
-	background-size: contain; 
-	background-repeat: no-repeat; 
-	width: 200px; 
-	height: 200px; 
-	transition-duration: 1s; 
-	
-} 
-#article-list { overflow: hidden; 
-	
-} 
-#article-list:hover:after { 
-	transition-duration: 1s; 
-	background-repeat: no-repeat; 
-	top: -190px; 
-	
-}
+
 
 header{
 	height: 90px;
@@ -556,3 +540,6 @@ header{
 	color:#fa7089;
 }
 
+p{
+	font-family: 'Bazzi';
+	font-size:20px} 
