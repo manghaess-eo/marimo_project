@@ -6,8 +6,8 @@
  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Bazzi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -541,5 +541,5 @@ header{
 }
 
 p{
-	font-family: 'Bazzi';
+	font-family: 'NanumSquareNeo-Variable';
 	font-size:20px} 
