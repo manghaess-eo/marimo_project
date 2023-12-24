@@ -417,12 +417,12 @@ footer a:hover {
 
 /* 마우스 커서 기본 */
 html, body, .fr-popup, .fr-active div>*, .fr-btn-wrap, span#viewers, select.form-control, input[type=checkbox], input[type=radio], .opt {
-    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c1.png?raw=true) 0 0, auto !important;
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c11.png?raw=true) 0 0, auto !important;
 }
 
 /* 마우스 커서 링크 */
 #right-search-form>#right-search-btn, #board-info #board-info-bottom #addFavoriteBtn, #article-list #article-option-area>#article-option-area-toggle-btn, #article-list>.article-list-row>.item>.list-title>.list-writer>span, .reply > .reply-header > .reply-writer.logged, .reply-menu, .btn, .fr-command.fr-btn, .fr-view img, .pull-left, a {
-    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c1.png?raw=true) 0 0, auto !important;
+    cursor: url(https://github.com/manghaess-eo/marimo_project/blob/main/c11.png?raw=true) 0 0, auto !important;
 }
 
 /* 마우스 커서 텍스트 */
